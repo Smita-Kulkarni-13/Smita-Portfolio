@@ -23,7 +23,28 @@ export default function Home() {
       <section className="mb-16">
         <h2 className="text-2xl font-semibold mb-4">🚀 Featured Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* Project Cards Placeholder */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="bg-white p-6 rounded-2xl shadow-md border border-gray-100"
+          >
+            <h3 className="text-xl font-semibold mb-2">🔥 Wildfire Exploratory Analysis</h3>
+            <p className="text-sm text-gray-700 mb-3">
+              Forecasted wildfire activity using NOAA data and ARIMA models. Mapped 3,000+ fire events using Cartopy, resolved SQL duration limitations, and delivered insights for emergency planning.
+            </p>
+            <div className="text-xs text-gray-600 mb-2">
+              <strong>Tools:</strong> Python, SQL, Cartopy, Seaborn, ARIMA
+            </div>
+            <a
+              href="https://github.com/Smita-Kulkarni-13/wildfire-analysis"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-2 text-blue-600 hover:underline text-sm"
+            >
+              View on GitHub →
+            </a>
+          </motion.div>
         </div>
       </section>
 
